@@ -20,4 +20,4 @@ def test_model_correctness():
             "contact_method": "cellular",
             "previous_campaign_outcome": "unknown"
         }
-    assert clf.predict(pd.DataFrame(data, index=[0]))[0] > 0 
+    assert clf.predict(pd.DataFrame(data, index=[0]))["prediction"] == 0 
