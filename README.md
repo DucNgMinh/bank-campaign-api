@@ -37,7 +37,7 @@ This repository contains a FastAPI application that serves a machine learning mo
    ```bash
    # Clone the repository
    git clone <repository-url>
-   cd bank-ml-api
+   cd bank-campaign-api
    
    # Install dependencies
    pip install -r requirements.txt
