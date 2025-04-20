@@ -1,20 +1,29 @@
-# Bank Marketing ML Model API
+# Bank Marketing Campaign API
 
 This repository contains a FastAPI application that serves a machine learning model for predicting whether a customer will subscribe to a certificate of deposit (CD).
-
-## Overview
-
-The API is built using FastAPI and serves a pre-trained Random Forest model that was trained using the MLflow framework. The model predicts whether a bank customer is likely to subscribe to a term deposit based on various features like age, job, marital status, etc.
 
 ## Project Structure
 
 ```
 .
-├── app.py              # FastAPI application
-├── model.pkl           # Trained ML model file
-├── requirements.txt    # Python dependencies
-├── Dockerfile          # For containerization
-└── test_client.py      # Script to test the API
+├── data/                     # Data directory
+│   ├── bank-names.txt        # List of bank names
+│   └── bank.xlsx             # Bank data in Excel format
+├── models/                   # Model artifacts directory
+│   └── model.pkl             # Serialized machine learning model
+├── notebooks/                # Jupyter notebooks for analysis and exploration
+├── tests/                    # Test files and test cases
+    ├── test_model_correctness.py      
+    └── test_client.py               
+├── training/                 # Model training code
+│   └── bank-ml-model-mlflow.py  # MLflow-based training script for bank model
+├── .pre-commit-config.yaml   # Pre-commit config
+├── app.py                    # Main application entry point
+├── bank-campaign-docker-compose.yaml  # Docker Compose file 
+├── Dockerfile                # Docker configuration for containerization
+├── Jenkinsfile               # Jenkins CI/CD pipeline configuration
+├── Readme.md                 # Project documentation
+└── requirements.txt          # Python dependencies
 ```
 
 ## Setup Instructions
@@ -191,15 +200,3 @@ For production deployment, consider:
 3. Implementing rate limiting
 4. Setting up monitoring and logging
 5. Using a production-grade ASGI server like Gunicorn with Uvicorn workers
-
-## License
-
-[Your License]
-
-  .
-  ├── app.py              # FastAPI application
-  ├── models              # Trained ML model file
-      └── model.pkl
-  ├── requirements.txt    # Python dependencies
-  ├── Dockerfile          # For containerization
-  └── test_client.py      # Script to test the API
