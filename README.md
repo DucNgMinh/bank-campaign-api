@@ -13,8 +13,7 @@ This repository contains a FastAPI application that serves a machine learning mo
 │   └── model.pkl             # Serialized machine learning model
 ├── notebooks/                # Jupyter notebooks for analysis and exploration
 ├── tests/                    # Test files and test cases
-    ├── test_model_correctness.py      
-    └── test_client.py               
+    └── test_model_correctness.py                
 ├── training/                 # Model training code
 │   └── bank-ml-model-mlflow.py  # MLflow-based training script for bank model
 ├── .pre-commit-config.yaml   # Pre-commit config
