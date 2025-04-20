@@ -10,7 +10,7 @@ WORKDIR /app
 #     && rm -rf /var/lib/apt/lists/*
 
 # Copy the requirements file and install dependencies
-COPY ./app.py /app
+COPY ./app /app
 
 COPY ./requirements.txt /app
 
